@@ -1,0 +1,28 @@
+module frmt1(a,b,c);
+    input a;
+    input wire b;
+    output reg c;
+endmodule 
+
+
+module frmt2(input a,
+            input wire b,
+            output reg c
+            );
+endmodule
+
+module frmt3(input a,input wire b,output reg c);
+
+endmodule
+
+module frmt4(input a, output reg f,
+input wire b,d,
+output reg c);
+
+endmodule
+
+module frmt5(input a, output reg f,y,
+input wire b,d,
+output reg c);
+
+endmodule
