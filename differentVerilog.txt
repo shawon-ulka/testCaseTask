@@ -4,6 +4,7 @@ module frmt1(a,b,c);
     output reg c;
 endmodule 
 
+input a,b,c, output e,f 
 
 module frmt2(input a,
             input wire b,

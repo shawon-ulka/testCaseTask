@@ -24,7 +24,7 @@ def specialityCheck(line):
         if len(elem.split())>1:
             speciality["onlyParams"]=False
             break
-    if not speciality["onlyParams"] and posOfCloseParen!=1:
+    if not speciality["onlyParams"] and posOfCloseParen!=-1:
         speciality["singleLined"]=True
     return speciality
 
