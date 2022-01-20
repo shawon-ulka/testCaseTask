@@ -59,9 +59,9 @@ def sortData(impData):
                 if len(prev_data)==2:
                     updated_type=prev_data[0]
                     allPortInfo[name]["type"]=updated_type
-                if len(splitted)==3:
-                    updated_type=splitted[0]
-                    updated_size=bitAddressSize(splitted[1])
+                if len(prev_data)==3:
+                    updated_type=prev_data[0]
+                    updated_size=bitAddressSize(prev_data[1])
                     allPortInfo[name]["type"]=updated_type
                     allPortInfo[name]["size"]=updated_size
             else:

@@ -21,8 +21,8 @@
     },
     "d": {
         "direction": "input",
-        "type": "wire",
-        "size": 1
+        "type": "reg",
+        "size": 8
     },
     "clk": {
         "direction": "inout",
