@@ -1,7 +1,6 @@
 from gettext import find
 from sortData import sortData
-from utils import specialityCheck
-from utils import infoForArgumentDeclartion
+import json
 import re
 with open("test5.sv") as f:
     lines=f.readlines()
@@ -32,4 +31,8 @@ for eachLine in lines:
             continue
         impData.append(elem)
 
-sorted=sortData(impData)
+allPortInfo=sortData(impData)
+portData=json.dumps(allPortInfo,indent=4)
+with open("jsonData","w") as f:
+    f.write(portData)
+f.close()
