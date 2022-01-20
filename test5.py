@@ -11,8 +11,9 @@ impData=[]
 for eachLine in lines:
     if eachLine.startswith("module"):
         brac_splited=eachLine.split("(")[1]
-        commaSplited=brac_splited.split(",")
-        for elem in commaSplited:
+        splited=re.split('[,;]+', brac_splited)
+        for elem in splited:
+            elem=elem.replace(")","")
             if elem=="" or elem=="\n":
                 continue
             impData.append(elem)
@@ -29,3 +30,5 @@ for eachLine in lines:
         if elem=="" or elem=="\n":
             continue
         impData.append(elem)
+
+print(impData)
