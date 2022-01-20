@@ -1,8 +1,8 @@
-module frmt2(input a,clk,be,wc
-            input wire b,
-            output reg c
-            reg [7:0] b,
-            logic c,b,a
+module frmt4(a, b, c);
 
-            );
-endmodule
+input a; 
+input b; 
+output c; 
+wire a;
+wire b;
+reg c;
