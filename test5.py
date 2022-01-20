@@ -1,4 +1,5 @@
 from gettext import find
+from sortData import sortData
 from utils import specialityCheck
 from utils import infoForArgumentDeclartion
 import re
@@ -13,6 +14,7 @@ for eachLine in lines:
         brac_splited=eachLine.split("(")[1]
         splited=re.split('[,;]+', brac_splited)
         for elem in splited:
+            elem=elem.strip()
             elem=elem.replace(")","")
             if elem=="" or elem=="\n":
                 continue
@@ -31,4 +33,4 @@ for eachLine in lines:
             continue
         impData.append(elem)
 
-print(impData)
+sorted=sortData(impData)
