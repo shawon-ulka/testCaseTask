@@ -1,17 +1,32 @@
 {
     "a": {
+        "direction": "output",
+        "type": "logic",
+        "size": 1
+    },
+    "clk": {
+        "direction": "input",
+        "type": "wire",
+        "size": 1
+    },
+    "be": {
+        "direction": "input",
+        "type": "wire",
+        "size": 1
+    },
+    "wc": {
         "direction": "input",
         "type": "wire",
         "size": 1
     },
     "b": {
-        "direction": "input",
-        "type": "wire",
+        "direction": "output",
+        "type": "logic",
         "size": 1
     },
     "c": {
         "direction": "output",
-        "type": "reg",
+        "type": "logic",
         "size": 1
     }
 }

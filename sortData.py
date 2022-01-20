@@ -46,7 +46,13 @@ def sortData(impData):
         if len(splitted)==1:
             port_dict={}
             name=splitted[0]
-            if len(info) and impData[index-1].split()[0] in direction:
+            for back in range(1,10):
+                if len(info)==0:
+                    break
+                prev_data=impData[index-back]
+                if prev_data.split()[0] not in direction:
+                    continue
+            # if len(info) and impData[index-1].split()[0] in direction:
                 lastInserted=info[-1]
                 port_dict["direction"]=lastInserted["direction"]
                 port_dict["size"]=lastInserted["size"]
@@ -54,7 +60,7 @@ def sortData(impData):
                 port_dict["name"]=name
                 info.append(port_dict)
                 allPortInfo[port_dict["name"]]={"direction":port_dict["direction"],"type":port_dict["type"],"size":port_dict["size"]}
-                continue
+                break
 
             for back in range(1,10):
                 if len(info)==0:
