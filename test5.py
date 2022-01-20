@@ -7,7 +7,6 @@ with open("test5.sv") as f:
     lines=f.readlines()
 f.close()
 
-direction=["inout","input","output"]
 impData=[]
 for eachLine in lines:
     if eachLine.startswith("module"):
