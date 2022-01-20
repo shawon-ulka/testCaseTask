@@ -57,7 +57,6 @@ def sortData(impData):
                 continue
 
             for back in range(1,10):
-                print("hello")
                 if len(info)==0:
                     break
                 prev_data=impData[index-back]

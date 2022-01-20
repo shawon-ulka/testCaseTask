@@ -4,40 +4,10 @@
         "type": "wire",
         "size": 1
     },
-    "f": {
-        "direction": "output",
-        "type": "reg",
-        "size": 1
-    },
-    "y": {
-        "direction": "output",
-        "type": "reg",
-        "size": 1
-    },
     "b": {
         "direction": "input",
-        "type": "reg",
-        "size": 8
-    },
-    "d": {
-        "direction": "input",
-        "type": "reg",
-        "size": 8
-    },
-    "clk": {
-        "direction": "inout",
         "type": "wire",
         "size": 1
-    },
-    "name1": {
-        "direction": "output",
-        "type": "reg",
-        "size": 1
-    },
-    "name2": {
-        "direction": "output",
-        "type": "reg",
-        "size": 8
     },
     "c": {
         "direction": "output",
