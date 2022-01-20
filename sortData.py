@@ -41,7 +41,20 @@ def infoSort(splitedLine):
         return port_dict
 
 def sortData(impData):
+    info=[]
     for data in impData:
         splitted=data.split()
+        if len(splitted)==1:
+            port_dict={}
+            if len(info):
+                lastInserted=info[-1]
+                port_dict["direction"]=lastInserted["direction"]
+                port_dict["size"]=lastInserted["size"]
+                port_dict["type"]=lastInserted["type"]
+                port_dict["name"]=splitted[0]
+                info.append(port_dict)
+            continue
         sorted=infoSort(splitted)
-        print(sorted)
+        info.append(sorted)
+    for elem in info:
+        print(elem)
