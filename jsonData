@@ -37,7 +37,7 @@
     "name2": {
         "direction": "output",
         "type": "reg",
-        "size": 1
+        "size": 8
     },
     "c": {
         "direction": "output",
