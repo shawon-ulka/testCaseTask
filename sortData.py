@@ -1,4 +1,4 @@
-def bitAddressSize(bitAddress):
+def bitSizeCalc(bitAddress):
     size=1
     brac_index=bitAddress.find('[')
     colon_index=bitAddress.find(':')
@@ -16,7 +16,7 @@ def infoSort(splitedLine):
     if len(splitedLine)>=4:
         port_dict["type"]=splitedLine[1]
         if splitedLine[2].startswith("[") and splitedLine[2].endswith("]"):
-            size=bitAddressSize(splitedLine[2])
+            size=bitSizeCalc(splitedLine[2])
             port_dict["size"]=size
         name=splitedLine[3].replace(';','')
         port_dict["name"]=name
@@ -27,7 +27,7 @@ def infoSort(splitedLine):
     elif len(splitedLine)==3:
         if splitedLine[1].startswith("[") and splitedLine[1].endswith("]"):
             port_dict["type"]="wire"
-            size=bitAddressSize(splitedLine[1])
+            size=bitSizeCalc(splitedLine[1])
             port_dict["size"]=size
         else:
             port_dict["type"]=splitedLine[1]
@@ -53,7 +53,7 @@ def sortData(impData):
                 prev_data=impData[index-back]
                 if prev_data.split()[0] not in direction:
                     continue
-            # if len(info) and impData[index-1].split()[0] in direction:
+
                 lastInserted=info[-1]
                 port_dict["direction"]=lastInserted["direction"]
                 port_dict["size"]=lastInserted["size"]
@@ -77,7 +77,7 @@ def sortData(impData):
                         break
                     if len(prev_data)==3:
                         updated_type=prev_data[0]
-                        updated_size=bitAddressSize(prev_data[1])
+                        updated_size=bitSizeCalc(prev_data[1])
                         allPortInfo[name]["type"]=updated_type
                         allPortInfo[name]["size"]=updated_size
                         break
@@ -95,7 +95,7 @@ def sortData(impData):
             if len(splitted)==3:
                 name=splitted[2]
                 updated_type=splitted[0]
-                updated_size=bitAddressSize(splitted[1])
+                updated_size=bitSizeCalc(splitted[1])
                 allPortInfo[name]["type"]=updated_type
                 allPortInfo[name]["size"]=updated_size
 
