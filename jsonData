@@ -2,16 +2,16 @@
     "a": {
         "direction": "input",
         "type": "wire",
-        "size": 1
+        "size": 8
     },
     "b": {
         "direction": "input",
         "type": "wire",
-        "size": 1
+        "size": 32
     },
     "c": {
         "direction": "output",
         "type": "reg",
-        "size": 1
+        "size": 4
     }
 }

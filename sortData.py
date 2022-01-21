@@ -1,9 +1,10 @@
 def bitAddressSize(bitAddress):
-    #need to fix the bug.
     size=1
-    for index,address in enumerate(bitAddress):
-        if index==1:
-            size+=int(address)
+    brac_index=bitAddress.find('[')
+    colon_index=bitAddress.find(':')
+    if brac_index!=-1 and colon_index!=-1:
+        size=int(bitAddress[brac_index+1:colon_index])+1
+        return size
     return size
 
 def infoSort(splitedLine):
